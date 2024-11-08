@@ -1,0 +1,8 @@
+FROM alpine:latest
+
+# Use edge repos to have up-to-date Yggdrasil
+RUN sed -i "s/\/alpine\/v.*\//\/alpine\/edge\//g" /etc/apk/repositories
+RUN apk update --no-cache && apk upgrade --no-cache
+RUN apk add --no-cache tor
+
+ENTRYPOINT tor --SocksPort 0.0.0.0:9050

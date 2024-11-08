@@ -1,0 +1,24 @@
+services:
+  tinyproxy:
+    build:
+      dockerfile: Dockerfile-tinyproxy
+    volumes:
+      - ./tinyproxy.conf:/etc/tinyproxy.conf
+    ports:
+      - 34443:34443
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+
+  i2pd:
+    image: purplei2p/i2pd
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+
+  tor:
+    build:
+      dockerfile: Dockerfile-tor
+    cap_drop:
+      - ALL
+    restart: unless-stopped
