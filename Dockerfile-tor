@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-# Use edge repos to have up-to-date Yggdrasil
+# Use edge repos to have up-to-date Tor
 RUN sed -i "s/\/alpine\/v.*\//\/alpine\/edge\//g" /etc/apk/repositories
 RUN apk update --no-cache && apk upgrade --no-cache
 RUN apk add --no-cache tor
