@@ -3,7 +3,7 @@
 ## Proxy bridge to Internet, Tor and I2P networks
 
 ### Why does this exist?
-This project is inspired by Acetone's [cross-network bridge](https://youtu.be/8r2bo-EEooM). The Dockerized version abstracts away most complexities of the guide. Currently this setup has no Yggdrasil Network support.
+This project is inspired by Acetone's [cross-network bridge](https://youtu.be/8r2bo-EEooM). This Dockerized version abstracts away most complexities of that guide. Currently this setup has no Yggdrasil Network support.
 
 ### How to use it?
 Spin up the containers:
