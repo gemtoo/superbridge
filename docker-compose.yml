@@ -1,7 +1,7 @@
 services:
   tinyproxy:
     build:
-      dockerfile: Dockerfile-tinyproxy
+      dockerfile: ./dockerfiles/Dockerfile-tinyproxy
     volumes:
       - ./tinyproxy.conf:/etc/tinyproxy.conf
     ports:
@@ -18,7 +18,7 @@ services:
 
   tor:
     build:
-      dockerfile: Dockerfile-tor
+      dockerfile: ./dockerfiles/Dockerfile-tor
     cap_drop:
       - ALL
     restart: unless-stopped
